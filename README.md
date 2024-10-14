@@ -56,7 +56,7 @@ implementation and so I added blanks to the Makefile for you).
 
 ## How to Get Started
 
-The starter code is available from Canvas.
+Clone this repository: https://github.com/angrynarwhal/cs3050fs2024a5 
 
 You are welcome to work on your code on any platform you like. However,
 you should be aware that submissions will
