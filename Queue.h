@@ -8,6 +8,17 @@ extern "C"
 
 // Data types
 
+typedef struct Node Node;
+typedef struct Queue Queue;
+
+// Function prototypes
+Queue* createQueue();
+void enqueue(Queue* q, int value);
+int dequeue(Queue* q);
+int isEmpty(Queue* q);
+void freeQueue(Queue* q);
+
+
 // Prototypes
 
 

@@ -1,3 +1,33 @@
+> 3050 lab from a friend to keep up my C skills and help with an issue \
+> Should anyone somehow come upon this, if you are having issues with directed and undirected graphs giving the same answer (the correct output for directed), this is an issue with the way adjacency is handled
+
+
+> Because of the way the hidden library is, the only difference between the adjacency list of a directed and undirected graph is if both vertices have the copy of the directed edge:
+
+```c
+// Pseudo-Code representation
+// When adding defined Edge(n -> m) (From n to m)
+if (Graph == directed) {
+  V[n].adj += Edge(n -> m)
+} else if (Graph == undirected) {
+  V[n].adj += Edge(n -> m)
+  V[m].adj += Edge(n -> m)
+}
+```
+
+> But it doesn't flip the direction for vertex m. This means that for an undirected graph (and technically a directed too so you don't have to change implementation) you should get the other vertex not as adj.pEdge.to but as (e.g. my helper function)
+```c
+// Get the other vertex of the edge
+int getOtherVertex(Edge edge, Vertex currentVertex)
+{
+    if (edge.from == currentVertex.number) {
+        return edge.to;
+    } else {
+        return edge.from;
+    }
+}
+```
+
 # CMP_SC 3050 FP2024
 
 # Assignment 5: Implement BFS and DFS: Submit to canvas

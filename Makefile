@@ -20,7 +20,7 @@ default: test
 	@echo Compiling $^ 
 	@$(CPP) $(CPPFLAGS) $^
 
-test : main.o BFS.o DFS.o Queue.o
+test : main.o BFS.o DFS.o Queue.o GraphHelpers.o
 	@echo Linking $@ 
 	@$(CC) $^ $(LDFLAGS) -o $@
 
